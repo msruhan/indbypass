@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: urllib
+Disallow: /
