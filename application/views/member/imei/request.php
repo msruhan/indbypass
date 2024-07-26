@@ -11,7 +11,7 @@
 </style>
 <div class="page-header">
     <div class="d-flex justify-content-between">
-        <h3 class="fw-bold">IMEI Request</h3>
+        <h3 class="fw-bold">Place Order</h3>
         <ul class="breadcrumbs">
             <li class="nav-home">
                 <a href="#">
@@ -22,7 +22,7 @@
                 <i class="icon-arrow-right"></i>
             </li>
             <li class="nav-item">
-                <a href="#">IMEI Request</a>
+                <a href="#">Place IMEI Order</a>
             </li>
         </ul>
     </div>
@@ -32,11 +32,10 @@
         <?= $this->session->flashdata('message') ?>
         <?= form_error('IMEI', '<div class="alert alert-danger alert-dismissible fade show" role="alert">', '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'); ?>
         <?= form_error('MethodID', '<div class="alert alert-danger alert-dismissible fade show" role="alert">', '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'); ?>
-        <?= form_error('Email', '<div class="alert alert-danger alert-dismissible fade show" role="alert">', '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'); ?>
         <?= form_error('Note', '<div class="alert alert-danger alert-dismissible fade show" role="alert">', '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'); ?>
         <div class="card">
             <div class="card-header">
-                <div class="card-title">IMEI Code Request</div>
+                <div class="card-title">Place IMEI Order</div>
             </div>
             <div class="card-body">
                 <div class="row">
@@ -72,16 +71,6 @@
                                 class="form-control" minlength="12" required><?php echo set_value('IMEI'); ?></textarea>
                         </div>
                     </div>
-
-                    <div class="form-group">
-                        <label class="control-label"><?php echo $this->lang->line('imei_fields_email') ?></label>
-                        <div class="col-12">
-                            <input type="email" name="Email"
-                                placeholder="<?php echo $this->lang->line('imei_fields_email') ?>" class="form-control"
-                                value="<?php echo set_value('Email'); ?>">
-                        </div>
-                    </div>
-
                     <div class="form-group">
                         <label class="control-label"><?php echo $this->lang->line('imei_request_note') ?></label>
                         <div class="col-12">

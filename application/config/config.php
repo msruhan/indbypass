@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']						= 	'https://localhost/indobypassgo/';
+$config['base_url']						= 	'https://localhost/indbypass/';
 $config['assets_url']					= 	$config['base_url'].'assets/';
 $config['page_url']						= 	$config['base_url'].'uploads/cms/pages/';
 $config['page_thumb_url']				= 	$config['base_url'].'uploads/cms/pages/thumbs/';
@@ -69,8 +69,8 @@ $config['plupload']['execution_time'] 			=	300; // 5 minutes execution time
 | variable so that it is blank.
 |
 */
-// $config['index_page'] = '';
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
+// $config['index_page'] = 'index.php';
 
 
 /*

@@ -158,46 +158,63 @@ class dashboard extends FSD_Controller
 	}
 
 	public function serverorder_new()
-	{
-		$id = $this->session->userdata('MemberID');
+{
+    $id = $this->session->userdata('MemberID');
 
-		$start      =  $_REQUEST['start'];
-        $length     = $_REQUEST['length'];
-        $cari_data  = $_REQUEST['search']['value'];
+    $start      =  $_REQUEST['start'];
+    $length     = $_REQUEST['length'];
+    $cari_data  = $_REQUEST['search']['value'];
 
-        $datas = $this->serverorder_model->get_server_data_new($id, $start, $length, $cari_data);
+    $datas = $this->serverorder_model->get_server_data_new($id, $start, $length, $cari_data);
 
-        $total = 9999999;
-        $array_data = array();
-        $no = $start + 1;
-        if (!empty($datas) && $datas != null) {
+    $total = 9999999;
+    $array_data = array();
+    $no = $start + 1;
+    if (!empty($datas) && $datas != null) {
 
-            foreach ($datas as $d) {
+        foreach ($datas as $d) {
 
-                $data["no"]         = $no;
-                $data["service"]    = $d['Title'];
-                $data["code"] 		= $d['Code'];
-                $data["email"]      = $d['Email'];
-                $data["note"]       = $d['Notes'];
-                $data["status"]     = $d['Status'];
-                $data["created_at"] = $d['CreatedDateTime'];
+            $status = $d['Status'];
 
-                array_push($array_data, $data);
-                $no++;
+            switch ($status) {
+                case "Pending":
+                    $status = "<span class='badge bg-warning text-white'>Pending</span>";
+                    break;
+                case "Issued":
+                    $status = "<span class='badge bg-success'>Success</span>";
+                    break;
+                case "Cancelled":
+                    $status = "<span class='badge bg-danger'>Rejected</span>";
+                    break;
+                default:
+                    $status = "<span class='bg bg-secondary'>Unknown</span>";
+                    break;
             }
+
+            $data["no"]         = $no;
+            $data["service"]    = $d['Title'];
+            $data["code"]       = $d['Code'];
+            $data["email"]      = $d['Email'];
+            $data["note"]       = $d['Notes'];
+            $data["status"]     = $status;
+            $data["created_at"] = $d['CreatedDateTime'];
+
+            array_push($array_data, $data);
+            $no++;
         }
+    }
 
-        $output = array(
+    $output = array(
 
-            "draw" => intval($_REQUEST['draw']),
-            "recordsTotal" => intval($total),
-            "recordsFiltered" => intval($total),
-            "data" => $array_data
-        );
+        "draw" => intval($_REQUEST['draw']),
+        "recordsTotal" => intval($total),
+        "recordsFiltered" => intval($total),
+        "data" => $array_data
+    );
 
+    echo json_encode($output);
+}
 
-        echo json_encode($output);
-	}
 
 	public function credit()
 	{
