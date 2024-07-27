@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Kaiadmin | <?= $Title ?></title>
+    <title>INDOBYPASS | <?= $Title ?></title>
     <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport" />
     <link rel="shortcut icon" href="<?= base_url() ?>img/indobypass_icon_new.png">
 
@@ -60,88 +60,98 @@
                         <i class="gg-more-vertical-alt"></i>
                     </button>
                 </div>
-                <!-- End Logo Header -->
-            </div>
-            <div class="sidebar-wrapper scrollbar scrollbar-inner">
-                <div class="sidebar-content">
-                    <ul class="nav nav-secondary">
-                        <li class="nav-section">
-                            <span class="sidebar-mini-icon">
-                                <i class="fa fa-ellipsis-h"></i>
-                            </span>
-                            <h4 class="text-section">Menus</h4>
-                        </li>
-                        <li
-                            <?= $this->uri->uri_string(2)=='member/dashboard'?'class="nav-item active"':'class="nav-item"'; ?>>
-                            <a href="<?= site_url() ?>member/dashboard">
-                                <i class="fas fa-home"></i>
-                                <p>Home</p>
-                            </a>
-                        </li>
-                        <li
-                            <?= $this->uri->uri_string(2)=='member/imeirequest'?'class="nav-item active"':'class="nav-item"'; ?>>
-                            <a href="<?= site_url() ?>member/imeirequest">
-                                <i class="fas fa-pen-square"></i>
-                                <p>IMEI Request</p>
-                            </a>
-                        </li>
-                        <li
-                            <?= $this->uri->uri_string(2)=='member/serverrequest'?'class="nav-item active"':'class="nav-item"'; ?>>
-                            <a href="<?= site_url() ?>member/serverrequest">
-                                <i class="fas fa-server"></i>
-                                <p>Server Request</p>
-                            </a>
-                        </li>
-                        <li
-                            <?= $this->uri->uri_string(2)=='member/imeirequest/history'?'class="nav-item active"':'class="nav-item"'; ?>>
-                            <a href="<?= site_url() ?>member/imeirequest/history">
-                                <i class="fas fas fa-tablet-alt"></i>
-                                <p>IMEI Order History</p>
-                            </a>
-                        </li>
-                        <li
-                            <?= $this->uri->uri_string(2)=='member/serverrequest/history'?'class="nav-item active"':'class="nav-item"'; ?>>
-                            <a href="<?= site_url() ?>member/serverrequest/history">
-                                <i class="fas fa-laptop-code"></i>
-                                <p>Server Order History</p>
-                            </a>
-                        </li>
-                        <!-- <li
-                            <?= $this->uri->uri_string(2)=='member/dashboard/credits'?'class="nav-item active"':'class="nav-item"'; ?>>
-                            <a href="<?= site_url() ?>member/dashboard/credits">
-                                <i class="fas fa-credit-card"></i>
-                                <p>Credits</p>
-                            </a>
-                        </li> -->
-                        <li
-                            <?= $this->uri->uri_string(2)=='member/imeirequest/listservices' || $this->uri->uri_string(2)=='member/serverrequest/listservices'?'class="nav-item active submenu"':'class="nav-item submenu"'; ?>>
-                            <a data-bs-toggle="collapse" href="#base" <?= $this->uri->uri_string(2)=='member/imeirequest/listservices' || $this->uri->uri_string(2)=='member/serverrequest/listservices'?'aria-expanded="true"':'aria-expanded="false" class="collapsed"'; ?>>
-                                <i class="fas fa-layer-group"></i>
-                                <p>All Services</p>
-                                <span class="caret"></span>
-                            </a>
-                            <div id="base" <?= $this->uri->uri_string(2)=='member/imeirequest/listservices' || $this->uri->uri_string(2)=='member/serverrequest/listservices'?'class="collapse show"':'class="collapse"'; ?>>
-                                <ul class="nav nav-collapse">
-                                    <li
-                                        <?= $this->uri->uri_string(2)=='member/imeirequest/listservices'?'class="active"':''; ?>>
-                                        <a href="<?= site_url() ?>member/imeirequest/listservices">
-                                            <span class="sub-item">IMEI Services</span>
-                                        </a>
-                                    </li>
-                                    <li
-                                        <?= $this->uri->uri_string(2)=='member/serverrequest/listservices'?'class="active"':''; ?>>
-                                        <a href="<?= site_url() ?>member/serverrequest/listservices">
-                                            <span class="sub-item">Server Services</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+      <!-- End Logo Header -->
+    </div>
+    <div class="sidebar-wrapper scrollbar scrollbar-inner">
+        <div class="sidebar-content">
+            <ul class="nav nav-secondary">
+                <li class="nav-section">
+                    <span class="sidebar-mini-icon">
+                        <i class="fa fa-ellipsis-h"></i>
+                    </span>
+                    <h4 class="text-section">Menus</h4>
+                </li>
+                <li <?= $this->uri->uri_string(2) == 'member/dashboard' ? 'class="nav-item active"' : 'class="nav-item"'; ?>>
+                    <a href="<?= site_url() ?>member/dashboard">
+                        <i class="fas fa-home"></i>
+                        <p>Home</p>
+                    </a>
+                </li>
+                <li <?= $this->uri->uri_string(2) == 'member/imeirequest/listservices' || $this->uri->uri_string(2) == 'member/serverrequest/listservices' ? 'class="nav-item active submenu"' : 'class="nav-item submenu"'; ?>>
+                    <a data-bs-toggle="collapse" href="#base" <?= $this->uri->uri_string(2) == 'member/imeirequest/listservices' || $this->uri->uri_string(2) == 'member/serverrequest/listservices' ? 'aria-expanded="true"' : 'aria-expanded="false" class="collapsed"'; ?>>
+                        <i class="fas fa-layer-group"></i>
+                        <p>All Services</p>
+                        <span class="caret"></span>
+                    </a>
+                    <div id="base" <?= $this->uri->uri_string(2) == 'member/imeirequest/listservices' || $this->uri->uri_string(2) == 'member/serverrequest/listservices' ? 'class="collapse show"' : 'class="collapse"'; ?>>
+                        <ul class="nav nav-collapse">
+                            <li <?= $this->uri->uri_string(2) == 'member/imeirequest/listservices' ? 'class="active"' : ''; ?>>
+                                <a href="<?= site_url() ?>member/imeirequest/listservices">
+                                    <span class="sub-item">IMEI Services</span>
+                                </a>
+                            </li>
+                            <li <?= $this->uri->uri_string(2) == 'member/serverrequest/listservices' ? 'class="active"' : ''; ?>>
+                                <a href="<?= site_url() ?>member/serverrequest/listservices">
+                                    <span class="sub-item">Server Services</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li <?= $this->uri->uri_string(2) == 'member/imeirequest' || $this->uri->uri_string(2) == 'member/serverrequest' ? 'class="nav-item active submenu"' : 'class="nav-item submenu"'; ?>>
+                    <a data-bs-toggle="collapse" href="#placeOrder" <?= $this->uri->uri_string(2) == 'member/imeirequest' || $this->uri->uri_string(2) == 'member/serverrequest' ? 'aria-expanded="true"' : 'aria-expanded="false" class="collapsed"'; ?>>
+                        <i class="fas fa-pen-square"></i>
+                        <p>Place Order</p>
+                        <span class="caret"></span>
+                    </a>
+                    <div id="placeOrder" <?= $this->uri->uri_string(2) == 'member/imeirequest' || $this->uri->uri_string(2) == 'member/serverrequest' ? 'class="collapse show"' : 'class="collapse"'; ?>>
+                        <ul class="nav nav-collapse">
+                            <li <?= $this->uri->uri_string(2) == 'member/imeirequest' ? 'class="active"' : ''; ?>>
+                                <a href="<?= site_url() ?>member/imeirequest">
+                                    <span class="sub-item">Place IMEI Order</span>
+                                </a>
+                            </li>
+                            <li <?= $this->uri->uri_string(2) == 'member/serverrequest' ? 'class="active"' : ''; ?>>
+                                <a href="<?= site_url() ?>member/serverrequest">
+                                    <span class="sub-item">Place Server Order</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                <li <?= $this->uri->uri_string(2) == 'member/imeirequest/history' || $this->uri->uri_string(2) == 'member/serverrequest/history' ? 'class="nav-item active submenu"' : 'class="nav-item submenu"'; ?>>
+                    <a data-bs-toggle="collapse" href="#placeOrder" <?= $this->uri->uri_string(2) == 'member/imeirequest/history' || $this->uri->uri_string(2) == 'member/serverrequest/history' ? 'aria-expanded="true"' : 'aria-expanded="false" class="collapsed"'; ?>>
+                    <i class="fas fa-history"></i>
+                        <p>Order History</p>
+                        <span class="caret"></span>
+                    </a>
+                    <div id="placeOrder" <?= $this->uri->uri_string(2) == 'member/imeirequest/history' || $this->uri->uri_string(2) == 'member/serverrequest/history' ? 'class="collapse show"' : 'class="collapse"'; ?>>
+                        <ul class="nav nav-collapse">
+                            <li <?= $this->uri->uri_string(2) == 'member/imeirequest/history' ? 'class="active"' : ''; ?>>
+                                <a href="<?= site_url() ?>member/imeirequest/history">
+                                    <span class="sub-item">Place IMEI Order</span>
+                                </a>
+                            </li>
+                            <li <?= $this->uri->uri_string(2) == 'member/serverrequest/history' ? 'class="active"' : ''; ?>>
+                                <a href="<?= site_url() ?>member/serverrequest/history">
+                                    <span class="sub-item">Place Server Order</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- <li <?= $this->uri->uri_string(2) == 'member/dashboard/credits' ? 'class="nav-item active"' : 'class="nav-item"'; ?>>
+                    <a href="<?= site_url() ?>member/dashboard/credits">
+                        <i class="fas fa-credit-card"></i>
+                        <p>Credits</p>
+                    </a>
+                </li> -->
+            </ul>
         </div>
-        <!-- End Sidebar -->
+    </div>
+    </div>
+    <!-- End Sidebar -->
+
+
 
         <div class="main-panel">
             <div class="main-header">
@@ -171,7 +181,7 @@
                     <div class="container-fluid">
                         <nav
                             class="navbar navbar-header-left navbar-expand-lg navbar-form nav-search p-0 d-none d-lg-flex">
-                            <img src="<?= base_url() ?>img/indobypass_icon_new.png" alt="" height="40">
+                            <img src="<?= base_url() ?>img/Indobypass-logo2-03.png" alt="" height="80">
                         </nav>
 
                         <ul class="navbar-nav topbar-nav ms-md-auto align-items-center">
@@ -232,9 +242,9 @@
                                             class="avatar-img rounded-circle" />
                                     </div>
                                     <span class="profile-username">
-                                        <span class="op-7">Hi,</span>
+                                        <span class="op-7">Hello,</span>
                                         <span
-                                            class="fw-bold"><?= $this->session->userdata('MemberFirstName') . " " . $this->session->userdata("MemberLastName");?></span>
+                                            class="fw-bold"><?= $this->session->userdata('MemberFirstName');?></span>
                                     </span>
                                 </a>
                                 <ul class="dropdown-menu dropdown-user animated fadeIn">
@@ -281,23 +291,22 @@
             <!-- content -->
 
             <footer class="footer">
-                <div class="container-fluid d-flex justify-content-between">
+                <div class="container-fluid d-flex justify-content-between align-items-center">
                     <nav class="pull-left">
                         <ul class="nav">
                             <li class="nav-item">
                                 <div class="nav-link">
-                                    <i class="fab fa-whatsapp"></i> +94-0787289764
+                                    <i class="fab fa-whatsapp"></i> +6285158856462
                                 </div>
                             </li>
                         </ul>
                     </nav>
-                    <div class="copyright">
-                        © 2024 Copyright reserved worldwideunlockstore.com
+                    <div class="copyright text-center font-weight-bold mx-auto">
+                        Copyrights © 2024 All Rights Reserved by INDOBYPASS Team
                     </div>
-                    <div>
-                        <i class="fab fa-telegram-plane"></i> <a
-                            href="https://t.me/joinchat/TXMvEoIyndr9lB-T">https://t.me/joinchat/TXMvEoIyndr9lB-T</a>
-                    </div>
+                    <!-- <div>
+                        <i class="fab fa-telegram-plane"></i> <a href="https://t.me/joinchat/TXMvEoIyndr9lB-T">https://t.me/joinchat/TXMvEoIyndr9lB-T</a>
+                    </div> -->
                 </div>
             </footer>
         </div>

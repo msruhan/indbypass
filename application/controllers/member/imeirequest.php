@@ -303,7 +303,7 @@ class imeirequest extends FSD_Controller
 				break;
 		}
 		$this->form_validation->set_rules('MethodID' , 'Method' ,'required');
-		$this->form_validation->set_rules('Email' , 'Email' ,'valid_email');
+		// $this->form_validation->set_rules('Email' , 'Email' ,'valid_email');
 		$this->form_validation->set_rules('Note' , 'Note' ,'max_length[255]');
 		if($this->form_validation->run() === FALSE)	
 		{

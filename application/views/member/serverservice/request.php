@@ -11,7 +11,7 @@
 </style>
 <div class="page-header">
     <div class="d-flex justify-content-between">
-        <h3 class="fw-bold">Server Request</h3>
+        <h3 class="fw-bold">Place Order</h3>
         <ul class="breadcrumbs">
             <li class="nav-home">
                 <a href="#">
@@ -22,7 +22,7 @@
                 <i class="icon-arrow-right"></i>
             </li>
             <li class="nav-item">
-                <a href="#">Server Request</a>
+                <a href="#">Place Server Order</a>
             </li>
         </ul>
     </div>
@@ -36,7 +36,7 @@
         <?= form_error('RequiredFields', '<div class="alert alert-danger alert-dismissible fade show" role="alert">', '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'); ?>
         <div class="card">
             <div class="card-header">
-                <div class="card-title">Request Server Service</div>
+                <div class="card-title">Place Server Order</div>
             </div>
             <div class="card-body">
                 <div class="row">

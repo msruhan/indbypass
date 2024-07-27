@@ -1,1 +1,3 @@
-Deny from all
+<!-- <Directory /path/to/your/directory> -->
+    AllowOverride All
+<!-- </Directory> -->
