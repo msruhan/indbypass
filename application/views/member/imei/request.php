@@ -105,7 +105,7 @@
                     <div class="d-flex">
                         <button class="btn btn-label-success btn-round active w-100"
                             onclick="historyOrderTable('Issued')">
-                            Available <i class="fas fa-check-circle"></i> </button>
+                            Success <i class="fas fa-check-circle"></i> </button>
                     </div>
                     <div class="separator-dashed"></div>
                     <div class="d-flex">
@@ -131,7 +131,7 @@
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">IMEI History Available</h5>
+                <h5 class="modal-title" id="exampleModalLabel">IMEI History Success</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">

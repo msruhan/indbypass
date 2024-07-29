@@ -1,4 +1,4 @@
-<style>
+<!-- <style>
 @media screen and (max-width: 767px) {
     .main-panel .page-header .breadcrumbs {
         margin-left: 0;
@@ -34,7 +34,110 @@ input.paginate_input {
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     width: 30%;
 }
+</style> -->
+
+
+<style>
+/* Responsif Breadcrumbs */
+@media screen and (max-width: 767px) {
+    .main-panel .page-header .breadcrumbs {
+        margin-left: 0;
+        padding-top: 5px;
+        padding-left: 5px;
+        padding-bottom: 0;
+        border-left: 0;
+    }
+}
+
+/* Tabel Header dan Body */
+.table thead th {
+    background-color: #f8f9fa;
+    color: #343a40;
+    border-bottom: 2px solid #dee2e6;
+    padding: 15px;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.table tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+.table>thead>tr>th {
+    padding: 5px !important;
+}
+
+.table>tbody>tr>td {
+    padding: 5px !important;
+}
+
+/* Styling Pagination Input */
+input.paginate_input {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #007bff;
+    border-radius: 0.375rem;
+    transition: border-color 0.3s ease;
+}
+
+input.paginate_input:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+/* Styling Modal */
+.modal-content {
+    padding: 1.5rem;
+}
+
+.modal-header {
+    background-color: #007bff;
+    color: white;
+}
+
+.modal-title {
+    font-size: 1.25rem;
+}
+
+.modal-body {
+    font-size: 1rem;
+}
+
+.table th, .table td {
+    color: #212529;
+    background-color: #fff;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 767px) {
+    .table {
+        font-size: 14px;
+    }
+
+    .modal-dialog {
+        max-width: 90%;
+    }
+}
+
+/* Status Icons */
+.status-icon {
+    font-size: 1.2rem;
+}
+
+.status-completed::before {
+    content: "\2714"; /* Checkmark */
+    color: green;
+}
+
+.status-pending::before {
+    content: "\26A0"; /* Warning */
+    color: orange;
+}
 </style>
+
+
 <div class="page-header">
     <div class="d-flex justify-content-between">
         <h3 class="fw-bold">IMEI Orders</h3>
@@ -66,14 +169,14 @@ input.paginate_input {
                         <table id="table_data_imei" class="table table-sm table-striped table-hover" style="width:100%;font-size:32px">
                             <thead>
                                 <tr>
-                                    <th>No</th>
-                                    <th>#</th>
-                                    <th>IMEI</th>
+                                    <th style="width: 5%;">No</th>
+                                    <th style="width: 5%;">Details</th>
+                                    <th style="width: 15%;">IMEI</th>
                                     <!-- <th>Description</th> -->
                                     <!-- <th>Price</th> -->
-                                    <th>Service</th>
+                                    <th style="width: 50%;">Service</th>
                                     <!-- <th>Code</th> -->
-                                    <th>Status</th>
+                                    <th style="width: 10%;">Status</th>
                                     <!-- <th>Created at</th> -->
                                 </tr>
                             </thead>

@@ -128,12 +128,12 @@
                         <ul class="nav nav-collapse">
                             <li <?= $this->uri->uri_string(2) == 'member/imeirequest/history' ? 'class="active"' : ''; ?>>
                                 <a href="<?= site_url() ?>member/imeirequest/history">
-                                    <span class="sub-item">Place IMEI Order</span>
+                                    <span class="sub-item">IMEI Order History</span>
                                 </a>
                             </li>
                             <li <?= $this->uri->uri_string(2) == 'member/serverrequest/history' ? 'class="active"' : ''; ?>>
                                 <a href="<?= site_url() ?>member/serverrequest/history">
-                                    <span class="sub-item">Place Server Order</span>
+                                    <span class="sub-item">Server Order History</span>
                                 </a>
                             </li>
                         </ul>
@@ -198,6 +198,11 @@
                                     </form>
                                 </ul>
                             </li>
+                            <li class="nav-item topbar-user dropdown hidden-caret">
+                                <p class="opacity-100" style="color:dark-blue">
+                                    <marquee behavior="scroll" direction="left">iCloud MEID / GSM BYPASS WITH SIGNAL SERVICE ON, iCloud MEID / GSM BYPASS WITH SIGNAL SERVICE ON</marquee>
+                                </p>
+                            </li>
                             <li class="nav-item topbar-icon dropdown hidden-caret">
                                 <a class="nav-link dropdown-toggle" href="#" id="notifDropdown" role="button"
                                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -233,7 +238,6 @@
                                     </li>
                                 </ul>
                             </li>
-
                             <li class="nav-item topbar-user dropdown hidden-caret">
                                 <a class="dropdown-toggle profile-pic" data-bs-toggle="dropdown" href="#"
                                     aria-expanded="false">
@@ -242,7 +246,7 @@
                                             class="avatar-img rounded-circle" />
                                     </div>
                                     <span class="profile-username">
-                                        <span class="op-7">Hello,</span>
+                                        <span class="op-7">Welcome,</span>
                                         <span
                                             class="fw-bold"><?= $this->session->userdata('MemberFirstName');?></span>
                                     </span>
