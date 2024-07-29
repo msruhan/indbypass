@@ -19,7 +19,7 @@
 					<div class="row">
 					<div class="col-5">
 						<div class="icon-big text-center">
-						<i class="fas fa-users"></i>
+						<i class="fas fa-wallet"></i>
 						</div>
 					</div>
 					<div class="col-7 col-stats">
@@ -38,7 +38,7 @@
 					<div class="row">
 					<div class="col-5">
 						<div class="icon-big text-center">
-						<i class="fas fa-user-check"></i>
+						<i class="fas fa-money-check"></i>
 						</div>
 					</div>
 					<div class="col-7 col-stats">
@@ -57,7 +57,7 @@
 					<div class="row">
 					<div class="col-5">
 						<div class="icon-big text-center">
-						<i class="fas fa-chart-pie"></i>
+						<i class="fas fa-layer-group"></i>
 						</div>
 					</div>
 					<div class="col-7 col-stats">
@@ -76,7 +76,7 @@
 					<div class="row">
 					<div class="col-5">
 						<div class="icon-big text-center">
-						<i class="far fa-check-circle"></i>
+						<i class="fas fa-server"></i>
 						</div>
 					</div>
 					<div class="col-7 col-stats">
@@ -245,6 +245,18 @@
 								<time class="date" datetime="9-17">Sep 17</time>
 								<span class="text">Attending the event <a href="single-event.php">"Some New Event"</a></span>
 							</li>
+							<li class="feed-item feed-item-secondary">
+								<time class="date" datetime="9-17">Sep 17</time>
+								<span class="text">Attending the event <a href="single-event.php">"Some New Event"</a></span>
+							</li>
+							<li class="feed-item feed-item-success">
+								<time class="date" datetime="9-17">Sep 17</time>
+								<span class="text">Attending the event <a href="single-event.php">"Some New Event"</a></span>
+							</li>
+							<li class="feed-item feed-item-info">
+								<time class="date" datetime="9-17">Sep 17</time>
+								<span class="text">Attending the event <a href="single-event.php">"Some New Event"</a></span>
+							</li>
 						</ol>
 					</div>
 				</div>
@@ -252,7 +264,7 @@
 								
 								<div class="col-md-5">
 									<div class="card card-post card-round">
-									<img class="card-img-top" src="<?= base_url() ?>assets/img/blogpost.jpg"  alt="Card image cap" />
+									<img class="card-img-top" src="<?= base_url() ?>assets/img/opensubmit.png"  alt="Card image cap" />
 									<div class="card-body">
 										<div class="d-flex">
 										<div class="avatar">
