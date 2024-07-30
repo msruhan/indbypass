@@ -20,6 +20,20 @@
     color: white;
 }
 
+.details-container {
+    text-align: center; /* Mengatur teks agar berada di tengah */
+    padding: 1rem; /* Memberikan padding sekitar konten */
+    background-color: #f8f9fa; /* Warna latar belakang opsional */
+    border: 1px solid #ddd; /* Border opsional */
+    border-radius: 4px; /* Sudut border opsional */
+}
+
+.details-row {
+    margin-bottom: 0.5rem; /* Jarak antar baris */
+    font-size: 1rem; /* Ukuran font */
+}
+
+
 /* .custom-card-header {
     padding: 1rem !important;
     font-size: 1.5rem !important;
@@ -226,13 +240,18 @@ $(document).ready(function() {
 
     // Format the details to be shown in the row
     function format(d) {
-        return `
-            <div>
-                <strong>Service:</strong> ${d.service}<br>
-                <strong>Status:</strong> ${d.status}<br>
+    return `
+        <div class="details-container">
+            <div class="details-row">
+                <strong>Service:</strong> ${d.service}
+            </div>
+            <div class="details-row">
+                <strong>Status:</strong> ${d.status}
+            </div>
+            <div class="details-row">
                 <strong>Details:</strong> ${d.detail}
             </div>
-        `;
-    }
+        </div>
+    `;}
 });
 </script>
