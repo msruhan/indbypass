@@ -106,18 +106,18 @@ class dashboard extends FSD_Controller
 					default:
 						$status = "<span class='bg bg-secondary'>Unknown</span>";
 						break;
-				}
+				} 
 
-                $data["action"]     = "<a href='#' onclick='detailIMEI(\"".$d['ID']."\")'><i class='fas fa-chevron-down'></i></a>";
+                $data["action"]      = "<a href='#' onclick='detailIMEI(\"".$d['ID']."\")'><i class='fas fa-chevron-down'></i></a>";
                 $data["no"]          = $no;
-                $data["detail"]      = "<a href='#' onclick='detailIMEI(\"".$d['ID']."\")'><i class='fas fa-eye'></i></a>";
+                $data["detail"]      =  "<button class='btn btn-info btn-sm' onclick='detailIMEI(\"".$d['ID']."\")'>View</button>";
                 $data["imei"]        = $d['IMEI'];
                 // $data["description"] = $d['Title'];
                 // $data["price"]       = $d['Price'];
                 $data["service"]     = $d['Title'];
                 // $data["code"]        = $d['Note'];
                 $data["status"]      = $status;
-                // $data["created_at"]  = $d['CreatedDateTime'];
+                $data["created_at"]  = $d['CreatedDateTime'];
 
                 array_push($array_data, $data);
                 $no++;

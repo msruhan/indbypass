@@ -1,6 +1,3 @@
-<!-- Link CSS Bootstrap -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
 <style>
 /* Responsif Breadcrumbs */
 @media screen and (max-width: 767px) {
@@ -13,64 +10,9 @@
     }
 }
 
-@media (max-width: 767px) {
-    .column-actions {
-        display: table-cell;
-    },
-    .column-details,
-    .column-service,
-    .column-status {
-        display: none;
-    }
-}
-
-@media (min-width: 768px) {
-    .column-actions {
-        display: none;
-    }
-}
-
-/* Tabel Header dan Body */
-.table thead th {
-    background-color: #f8f9fa;
-    color: #343a40;
-    border-bottom: 2px solid #dee2e6;
-    padding: 15px;
-}
-
-.table tbody tr:nth-child(odd) {
-    background-color: #f9f9f9;
-}
-
-.table tbody tr:hover {
-    background-color: #e9ecef;
-}
-
-.table>thead>tr>th {
-    padding: 5px !important;
-}
-
-.table>tbody>tr>td {
-    padding: 5px !important;
-}
-
-/* Styling Pagination Input */
-input.paginate_input {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    border: 2px solid #007bff;
-    border-radius: 0.375rem;
-    transition: border-color 0.3s ease;
-}
-
-input.paginate_input:focus {
-    border-color: #0056b3;
-    outline: none;
-}
-
 /* Styling Modal */
 .modal-content {
-    padding: 1.5rem;
+    padding: 0.5rem;
 }
 
 .modal-header {
@@ -78,43 +20,11 @@ input.paginate_input:focus {
     color: white;
 }
 
-.modal-title {
-    font-size: 1.25rem;
-}
-
-.modal-body {
-    font-size: 1rem;
-}
-
-.table th, .table td {
-    color: #212529;
-    background-color: #fff;
-}
-
-/* Responsive Adjustments */
-@media screen and (max-width: 767px) {
-    .table {
-        font-size: 14px;
+/* Hide "Actions" column on desktop */
+@media screen and (min-width: 768px) {
+    .column-actions {
+        display: none;
     }
-
-    .modal-dialog {
-        max-width: 90%;
-    }
-}
-
-/* Status Icons */
-.status-icon {
-    font-size: 1.2rem;
-}
-
-.status-completed::before {
-    content: "\2714"; /* Checkmark */
-    color: green;
-}
-
-.status-pending::before {
-    content: "\26A0"; /* Warning */
-    color: orange;
 }
 </style>
 
@@ -131,7 +41,7 @@ input.paginate_input:focus {
                 <i class="icon-arrow-right"></i>
             </li>
             <li class="nav-item">
-                <a href="#">IMEI Orders </a>
+                <a href="#">IMEI Orders</a>
             </li>
         </ul>
     </div>
@@ -150,12 +60,13 @@ input.paginate_input:focus {
                         <table id="table_data_imei" class="table table-sm table-striped table-hover" style="width:100%;font-size:32px">
                             <thead>
                                 <tr>
-                                <th style="width: 5%;">Actions</th>
-                                <th style="width: 5%;">No</th>
-                                <th class="column-details" style="width: 5%;">Details</th>
-                                <th style="width: 15%;">IMEI</th>
-                                <th class="column-service" style="width: 50%;">Service</th>
-                                <th class="column-status" style="width: 10%;">Status</th>
+                                    <th class="column-actions" style="width: 5%;">Actions</th>
+                                    <th style="width: 5%;">No</th>
+                                    <th style="width: 10%;">Date</th>
+                                    <th style="width: 10%;">IMEI</th>
+                                    <th class="column-service" style="width: 40%;">Service</th>
+                                    <th class="column-status" style="width: 5%;">Status</th>
+                                    <th class="column-details" style="width: 5%;">Details</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -258,15 +169,16 @@ $(document).ready(function() {
         columns: [
             {
                 data: null,
-                className: 'details-control',
-                defaultContent: '<button class="btn btn-primary">Toggle</button>',
+                className: 'details-control column-actions',
+                defaultContent: '<button class="btn btn-primary"><i class="fas fa-chevron-down"></i></button>',
                 orderable: false
             },
             { data: "no" },
-            { data: "detail" },
+            { data: "created_at" },
             { data: "imei" },
             { data: "service" },
-            { data: "status" }
+            { data: "status" },
+            { data: "detail" },
         ],
         pagingType: "input",
         "processing": true,
