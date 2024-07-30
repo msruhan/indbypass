@@ -20,6 +20,28 @@
     color: white;
 }
 
+.details-container {
+    text-align: center; /* Mengatur teks agar berada di tengah */
+    padding: 1rem; /* Memberikan padding sekitar konten */
+    background-color: #f8f9fa; /* Warna latar belakang opsional */
+    border: 1px solid #ddd; /* Border opsional */
+    border-radius: 4px; /* Sudut border opsional */
+}
+
+.details-row {
+    margin-bottom: 0.5rem; /* Jarak antar baris */
+    font-size: 1rem; /* Ukuran font */
+}
+
+
+/* .custom-card-header {
+    padding: 1rem !important;
+    font-size: 1.5rem !important;
+}
+ */
+/* .custom-card-body {
+    padding: 3rem !important;
+    } */
 /* Hide "Actions" column on desktop */
 /* @media screen and (min-width: 768px) {
     .column-actions {
@@ -31,6 +53,9 @@
 @media screen and (max-width: 767px) {
     .column-status, .column-details, .column-service {
         display: none;
+    }
+    .custom-card-body {
+    padding: 3rem !important;
     }
 }
 </style>
@@ -57,18 +82,18 @@
 <div class="row">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
         <div class="card">
-            <div class="card-header">
+            <div class="card-header custom-card-header">
                 <div class="card-title">IMEI Order History</div>
             </div>
-            <div class="card-body">
+            <div class="card-body custom-card-body">
                 <div class="row">
                     <div class="table-responsive p-0">
                         <!-- Projects table -->
                         <table id="table_data_imei" class="table table-sm table-striped table-hover" style="width:100%;font-size:32px">
                             <thead>
                                 <tr>
-                                    <th class="column-actions" style="width: 5%;">Actions</th>
-                                    <th style="width: 5%;">No</th>
+                                    <th class="column-actions" style="width: 2%;">Actions</th>
+                                    <th style="width: 2%;">No</th>
                                     <th style="width: 10%;">Date</th>
                                     <th style="width: 10%;">IMEI</th>
                                     <th class="column-service" style="width: 40%;">Service</th>
@@ -215,13 +240,18 @@ $(document).ready(function() {
 
     // Format the details to be shown in the row
     function format(d) {
-        return `
-            <div>
-                <strong>Service:</strong> ${d.service}<br>
-                <strong>Status:</strong> ${d.status}<br>
+    return `
+        <div class="details-container">
+            <div class="details-row">
+                <strong>Service:</strong> ${d.service}
+            </div>
+            <div class="details-row">
+                <strong>Status:</strong> ${d.status}
+            </div>
+            <div class="details-row">
                 <strong>Details:</strong> ${d.detail}
             </div>
-        `;
-    }
+        </div>
+    `;}
 });
 </script>
