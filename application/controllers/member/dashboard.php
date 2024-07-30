@@ -95,22 +95,23 @@ class dashboard extends FSD_Controller
 
 				switch ($status) {
 					case "Pending":
-						$status = "<span class='badge bg-warning text-white'>Pending</span>";
+						$status = "<button type='button' class='btn btn-warning btn-xs' disabled>Pending</button>";
 						break;
 					case "Success":
-						$status = "<span class='badge bg-success'>Success</span>";
+						$status = "<button type='button' class='btn btn-success btn-xs' disabled>Success</button>";
 						break;
 					case "Canceled":
-						$status = "<span class='badge bg-danger'>Rejected</span>";
+						$status = "<button type='button' class='btn btn-danger btn-xs' disabled>Rejected</button>";
 						break;
 					default:
-						$status = "<span class='bg bg-secondary'>Unknown</span>";
+						$status = "<button type='button' class='btn btn-secondary btn-xs' disabled>Unknown</button>";
 						break;
-				} 
+				}
+				
 
                 $data["action"]      = "<a href='#' onclick='detailIMEI(\"".$d['ID']."\")'><i class='fas fa-chevron-down'></i></a>";
                 $data["no"]          = $no;
-                $data["detail"]      =  "<button class='btn btn-info btn-sm' onclick='detailIMEI(\"".$d['ID']."\")'>View</button>";
+                $data["detail"]      =  "<button class='btn btn-primary btn-xs' onclick='detailIMEI(\"".$d['ID']."\")'>View</button>";
                 $data["imei"]        = $d['IMEI'];
                 // $data["description"] = $d['Title'];
                 // $data["price"]       = $d['Price'];
