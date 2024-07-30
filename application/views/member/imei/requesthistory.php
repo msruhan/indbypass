@@ -21,11 +21,11 @@
 }
 
 /* Hide "Actions" column on desktop */
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
     .column-actions {
         display: none;
     }
-}
+} */
 
 /* Hide "Status", "Detail", and "Service" columns on smartphone */
 @media screen and (max-width: 767px) {
@@ -177,7 +177,7 @@ $(document).ready(function() {
             {
                 data: null,
                 className: 'details-control column-actions',
-                defaultContent: '<button class="btn btn-primary"><i class="fas fa-chevron-down"></i></button>',
+                defaultContent: '<button class="btn btn-secondary btn-round btn-xs"><i class="fas fa-chevron-down"></i></button>',
                 orderable: false
             },
             { data: "no" },
