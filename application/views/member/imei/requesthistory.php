@@ -26,6 +26,13 @@
         display: none;
     }
 }
+
+/* Hide "Status", "Detail", and "Service" columns on smartphone */
+@media screen and (max-width: 767px) {
+    .column-status, .column-details, .column-service {
+        display: none;
+    }
+}
 </style>
 
 <div class="page-header">
