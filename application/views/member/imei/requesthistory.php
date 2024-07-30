@@ -34,7 +34,6 @@
 }
 
 
-
 /* .custom-card-header {
     padding: 1rem !important;
     font-size: 1.5rem !important;
@@ -52,34 +51,11 @@
 
 /* Hide "Status", "Detail", and "Service" columns on smartphone */
 @media screen and (max-width: 767px) {
-    .table {
-        font-size: 12px; /* Sesuaikan ukuran font */
-    }
-    
-    .column-actions, th, td {
-        text-align: center; /* Atur teks ke tengah jika perlu */
-    }
-    th, td {
-        padding: 0.5rem; /* Kurangi padding */
-    }
     .column-status, .column-details, .column-service {
         display: none;
     }
     .custom-card-body {
     padding: 3rem !important;
-    }
-    .column-actions {
-        width: 5%; /* Sesuaikan lebar kolom actions */
-    }
-    .column-no {
-        width: 10%; /* Sesuaikan lebar kolom no */
-    }
-    .column-date {
-        width: 20%; /* Sesuaikan lebar kolom date */
-    }
-        
-    .column-imei {
-        width: 30%; /* Sesuaikan lebar kolom imei */
     }
 }
 </style>
@@ -116,10 +92,10 @@
                         <table id="table_data_imei" class="table table-sm table-striped table-hover" style="width:100%;font-size:32px">
                             <thead>
                                 <tr>
-                                    <th class="column-actions" style="width: 2%;">Actions</th>
-                                    <th style="column-no" style="width: 2%;">No</th>
-                                    <th style="column-date" style="width: 10%;">Date</th>
-                                    <th style="column-imei" style="width: 10%;">IMEI</th>
+                                    <th class="column-actions" style="width: 1%;"></th>
+                                    <th style="width: 1%;">No</th>
+                                    <th style="width: 10%;">Date</th>
+                                    <th style="width: 10%;">IMEI</th>
                                     <th class="column-service" style="width: 40%;">Service</th>
                                     <th class="column-status" style="width: 5%;">Status</th>
                                     <th class="column-details" style="width: 5%;">Details</th>
@@ -229,9 +205,9 @@ $(document).ready(function() {
                 defaultContent: '<button class="btn btn-secondary btn-round btn-xs toggle-detail"><i class="fas fa-chevron-down"></i></button>',
                 orderable: false
             },
-            { data: "no", className: 'column-no' },
-            { data: "created_at", className: 'column-date' },
-            { data: "imei", className: 'column-imei' },
+            { data: "no" },
+            { data: "created_at" },
+            { data: "imei" },
             { data: "service", className: 'column-service' },
             { data: "status", className: 'column-status' },
             { data: "detail", className: 'column-details' },
@@ -242,7 +218,7 @@ $(document).ready(function() {
         bInfo: false,
         ordering: false,
         deferRender: true,
-        searching: true,
+        searching: true
     });
 
     // Handle click event for the 'Toggle' button
