@@ -119,12 +119,12 @@
                         </ul>
 
                 <li <?= $this->uri->uri_string(2) == 'member/imeirequest/history' || $this->uri->uri_string(2) == 'member/serverrequest/history' ? 'class="nav-item active submenu"' : 'class="nav-item submenu"'; ?>>
-                    <a data-bs-toggle="collapse" href="#placeOrder" <?= $this->uri->uri_string(2) == 'member/imeirequest/history' || $this->uri->uri_string(2) == 'member/serverrequest/history' ? 'aria-expanded="true"' : 'aria-expanded="false" class="collapsed"'; ?>>
+                    <a data-bs-toggle="collapse" href="#orderHistory" <?= $this->uri->uri_string(2) == 'member/imeirequest/history' || $this->uri->uri_string(2) == 'member/serverrequest/history' ? 'aria-expanded="true"' : 'aria-expanded="false" class="collapsed"'; ?>>
                     <i class="fas fa-history"></i>
                         <p>Order History</p>
                         <span class="caret"></span>
                     </a>
-                    <div id="placeOrder" <?= $this->uri->uri_string(2) == 'member/imeirequest/history' || $this->uri->uri_string(2) == 'member/serverrequest/history' ? 'class="collapse show"' : 'class="collapse"'; ?>>
+                    <div id="orderHistory" <?= $this->uri->uri_string(2) == 'member/imeirequest/history' || $this->uri->uri_string(2) == 'member/serverrequest/history' ? 'class="collapse show"' : 'class="collapse"'; ?>>
                         <ul class="nav nav-collapse">
                             <li <?= $this->uri->uri_string(2) == 'member/imeirequest/history' ? 'class="active"' : ''; ?>>
                                 <a href="<?= site_url() ?>member/imeirequest/history">
