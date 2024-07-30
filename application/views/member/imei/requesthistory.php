@@ -33,15 +33,6 @@
     font-size: 1rem; /* Ukuran font */
 }
 
-
-/* .custom-card-header {
-    padding: 1rem !important;
-    font-size: 1.5rem !important;
-}
- */
-/* .custom-card-body {
-    padding: 3rem !important;
-    } */
 /* Hide "Actions" column on desktop */
 /* @media screen and (min-width: 768px) {
     .column-actions {
@@ -53,9 +44,6 @@
 @media screen and (max-width: 767px) {
     .column-status, .column-details, .column-service {
         display: none;
-    }
-    .custom-card-body {
-    padding: 3rem !important;
     }
 }
 </style>
