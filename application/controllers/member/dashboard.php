@@ -108,8 +108,9 @@ class dashboard extends FSD_Controller
 						break;
 				}
 
+                $data["action"]     = "<a href='#' onclick='detailIMEI(\"".$d['ID']."\")'><i class='fas fa-chevron-down'></i></a>";
                 $data["no"]          = $no;
-                $data["detail"]      = "<a href='#' onclick='detailIMEI(\"".$d['ID']."\")'><i class='fa fa-eye'></i></a>";
+                $data["detail"]      = "<a href='#' onclick='detailIMEI(\"".$d['ID']."\")'><i class='fas fa-eye'></i></a>";
                 $data["imei"]        = $d['IMEI'];
                 // $data["description"] = $d['Title'];
                 // $data["price"]       = $d['Price'];
