@@ -114,9 +114,10 @@ class dashboard extends FSD_Controller
                 $data["detail"]      =  "<button class='btn btn-primary btn-xs' onclick='detailIMEI(\"".$d['ID']."\")'>View</button>";
                 $data["imei"]        = $d['IMEI'];
                 // $data["description"] = $d['Title'];
-                // $data["price"]       = $d['Price'];
+                $data["price"]       = $d['Price'];
                 $data["service"]     = $d['Title'];
-                // $data["code"]        = $d['Note'];
+                $data["note"]    	 = $d['Note'];
+                $data["comments"]    = $d['Comments'];
                 $data["status"]      = $status;
                 $data["created_at"]  = $d['CreatedDateTime'];
 

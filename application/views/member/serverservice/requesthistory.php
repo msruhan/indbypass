@@ -266,6 +266,7 @@
                 console.error('No data available for this row.');
             }
         });
+        
 
         function extractTextFromHTML(htmlString) {
             var tempDiv = document.createElement("div");
