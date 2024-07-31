@@ -83,8 +83,8 @@
                                     <th style="width: 1%;">No</th>
                                     <th style="width: 10%;">Date</th>
                                     <th style="width: 10%;">Email</th>
-                                    <th style="width: 40%;">Service</th>
-                                    <th style="width: 5%;">Status</th>
+                                    <th class="column-service" style="width: 40%;">Service</th>
+                                    <th class="column-status" style="width: 5%;">Status</th>
                                     <th class="column-details" style="width: 5%;">Details</th>
                                 </tr>
                             </thead>
