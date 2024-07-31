@@ -11,11 +11,11 @@
     }
 
     /* Hide "Actions" column on desktop */ 
-    @media screen and (min-width: 768px) {
+    /* @media screen and (min-width: 768px) {
         .column-actions {
             display: none;
         }
-    }
+    } */
 
     /* Hide "Status", "Detail", and "Service" columns on smartphone */
     @media screen and (max-width: 767px) {
@@ -33,18 +33,16 @@
         color: white;
     }
     .details-container {
-    text-align: center; /* Mengatur teks agar berada di tengah */
-    padding: 1rem; /* Memberikan padding sekitar konten */
-    background-color: #f8f9fa; /* Warna latar belakang opsional */
-    border: 1px solid #ddd; /* Border opsional */
-    border-radius: 4px; /* Sudut border opsional */
+        text-align: center; /* Mengatur teks agar berada di tengah */
+        padding: 1rem; /* Memberikan padding sekitar konten */
+        background-color: #f8f9fa; /* Warna latar belakang opsional */
+        border: 1px solid #ddd; /* Border opsional */
+        border-radius: 4px; /* Sudut border opsional */
     }
     .details-row {
         margin-bottom: 0.5rem; /* Jarak antar baris */
         font-size: 1rem; /* Ukuran font */
     }
-
-
 </style>
 
 <div class="page-header">
@@ -212,13 +210,15 @@
         $('#table_data_server tbody').on('click', 'button.view-detail', function () {
             var tr = $(this).closest('tr');
             var row = table.row(tr);
-            
+
             if (row.data()) { // Check if data exists
+                console.log("Row data:", row.data()); // Log data for debugging
+
                 // Populate modal with row data
                 $('#serviceModal').text(row.data().service || 'N/A');
                 $('#emailModal').text(row.data().email || 'N/A');
                 $('#priceModal').text(row.data().price || 'N/A');
-                $('#statusModal').text(row.data().status || 'N/A');
+                $('#statusModal').html(formatBadge(row.data().status));
                 $('#createdAtModal').text(row.data().created_at || 'N/A');
 
                 // Show the modal
@@ -236,7 +236,7 @@
                         <strong>Service:</strong> ${d.service || 'N/A'}
                     </div>
                     <div class="details-row">
-                        <strong>Status:</strong> ${d.status || 'N/A'}
+                        <strong>Status:</strong> ${formatBadge(d.status)}
                     </div>
                     <div class="details-row">
                         <strong>Detail:</strong> <button class="btn btn-info btn-xs view-detail-inline">View</button>
@@ -251,11 +251,13 @@
             var row = table.row(tr);
             
             if (row.data()) { // Check if data exists
+                console.log("Row data inline:", row.data()); // Log data for debugging
+
                 // Populate modal with row data
                 $('#serviceModal').text(row.data().service || 'N/A');
                 $('#emailModal').text(row.data().email || 'N/A');
                 $('#priceModal').text(row.data().price || 'N/A');
-                $('#statusModal').text(row.data().status || 'N/A');
+                $('#statusModal').html(formatBadge(row.data().status));
                 $('#createdAtModal').text(row.data().created_at || 'N/A');
 
                 // Show the modal
@@ -264,6 +266,28 @@
                 console.error('No data available for this row.');
             }
         });
+
+        function extractTextFromHTML(htmlString) {
+            var tempDiv = document.createElement("div");
+            tempDiv.innerHTML = htmlString;
+            return tempDiv.textContent || tempDiv.innerText || "";
+        }
+
+        function formatBadge(status) {
+            var normalizedStatus = extractTextFromHTML(status).trim(); // Normalize status by trimming whitespace
+            console.log("Normalized status:", normalizedStatus); // Log normalized status for debugging
+
+            switch (normalizedStatus) {
+                case 'Success':
+                    return "<span class='badge bg-success'>Success</span>";
+                case 'Pending':
+                    return "<span class='badge bg-warning'>Pending</span>";
+                case 'Rejected':
+                    return "<span class='badge bg-danger'>Rejected</span>";
+                default:
+                    return "<span class='badge bg-secondary'>Unknown</span>";
+            }
+        }
+
     });
 </script>
-
