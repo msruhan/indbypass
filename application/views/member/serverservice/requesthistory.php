@@ -171,8 +171,8 @@
                 { data: "no" },
                 { data: "created_at" },
                 { data: "email" },
-                { data: "service" },
-                { data: "status" },
+                { data: "service", className: 'column-service' },
+                { data: "status", className: 'column-status' },
                 {
                     data: null,
                     className: 'column-details',
