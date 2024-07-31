@@ -1,51 +1,50 @@
 <style>
-/* Responsif Breadcrumbs */
-@media screen and (max-width: 767px) {
-    .main-panel .page-header .breadcrumbs {
-        margin-left: 0;
-        padding-top: 5px;
-        padding-left: 5px;
-        padding-bottom: 0;
-        border-left: 0;
+    /* Responsif Breadcrumbs */
+    @media screen and (max-width: 767px) {
+        .main-panel .page-header .breadcrumbs {
+            margin-left: 0;
+            padding-top: 5px;
+            padding-left: 5px;
+            padding-bottom: 0;
+            border-left: 0;
+        }
     }
-}
 
-/* Styling Modal */
-.modal-content {
-    padding: 0.5rem;
-}
-
-.modal-header {
-    background-color: #007bff;
-    color: white;
-}
-
-.details-container {
-    text-align: center; /* Mengatur teks agar berada di tengah */
-    padding: 1rem; /* Memberikan padding sekitar konten */
-    background-color: #f8f9fa; /* Warna latar belakang opsional */
-    border: 1px solid #ddd; /* Border opsional */
-    border-radius: 4px; /* Sudut border opsional */
-}
-
-.details-row {
-    margin-bottom: 0.5rem; /* Jarak antar baris */
-    font-size: 1rem; /* Ukuran font */
-}
-
-/* Hide "Actions" column on desktop */
-/* @media screen and (min-width: 768px) {
-    .column-actions {
-        display: none;
+    /* Hide "Actions" column on desktop */ 
+    @media screen and (min-width: 768px) {
+        .column-actions {
+            display: none;
+        }
     }
-} */
 
-/* Hide "Status", "Detail", and "Service" columns on smartphone */
-@media screen and (max-width: 767px) {
-    .column-status, .column-details, .column-service {
-        display: none;
+    /* Hide "Status", "Detail", and "Service" columns on smartphone */
+    @media screen and (max-width: 767px) {
+        .column-status, .column-details, .column-service {
+            display: none;
+        }
     }
-}
+
+    /* Styling Modal */
+    .modal-content {
+        padding: 0.5rem;
+    }
+    .modal-header {
+        background-color: #007bff;
+        color: white;
+    }
+    .details-container {
+        text-align: center; /* Mengatur teks agar berada di tengah */
+        padding: 1rem; /* Memberikan padding sekitar konten */
+        background-color: #f8f9fa; /* Warna latar belakang opsional */
+        border: 1px solid #ddd; /* Border opsional */
+        border-radius: 4px; /* Sudut border opsional */
+    }
+    .details-row {
+        margin-bottom: 0.5rem; /* Jarak antar baris */
+        font-size: 1rem; /* Ukuran font */
+    }
+
+ 
 </style>
 
 <div class="page-header">

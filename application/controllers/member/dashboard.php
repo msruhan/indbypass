@@ -200,6 +200,7 @@ class dashboard extends FSD_Controller
             $data["note"]       = $d['Notes'];
             $data["status"]     = $status;
             $data["created_at"] = $d['CreatedDateTime'];
+			$data["detail"]     =  "<button class='btn btn-secondary btn-xs' onclick='detailIMEI(\"".$d['ID']."\")'>View</button>";
 
             array_push($array_data, $data);
             $no++;
