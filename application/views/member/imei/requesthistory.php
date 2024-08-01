@@ -23,7 +23,7 @@
             padding: 0.5rem;
         }
         .modal-header {
-            background-color: #007bff;
+            background-color: #7757f7;
             color: white;
         }
         .details-container {
