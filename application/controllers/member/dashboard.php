@@ -93,25 +93,25 @@ class dashboard extends FSD_Controller
 
 				$status = ($d['Status'] == "Issued") ? "Success" : $d['Status'];
 
-				switch ($status) {
-					case "Pending":
-						$status = "<button type='button' class='btn btn-warning btn-xs' disabled>Pending</button>";
-						break;
-					case "Success":
-						$status = "<button type='button' class='btn btn-success btn-xs' disabled>Success</button>";
-						break;
-					case "Canceled":
-						$status = "<button type='button' class='btn btn-danger btn-xs' disabled>Rejected</button>";
-						break;
-					default:
-						$status = "<button type='button' class='btn btn-secondary btn-xs' disabled>Unknown</button>";
-						break;
-				}
-				
+			switch ($status) {
+				case "Pending":
+					$status = "<span class='badge bg-warning'>Pending</span>";
+					break;
+				case "Success":
+					$status = "<span class='badge bg-success'>Success</span>";
+					break;
+				case "Canceled":
+					$status = "<span class='badge bg-danger'>Rejected</span>"; // Mengubah Canceled menjadi Rejected
+					break;
+				default:
+					$status = "<span class='badge bg-secondary'>Unknown</span>";
+					break;
+			}
+
 
                 $data["action"]      = "<a href='#' onclick='detailIMEI(\"".$d['ID']."\")'><i class='fas fa-chevron-down'></i></a>";
                 $data["no"]          = $no;
-                $data["detail"]      =  "<button class='btn btn-primary btn-xs' onclick='detailIMEI(\"".$d['ID']."\")'>View</button>";
+                $data["detail"]      =  "<button class='btn btn-info btn-xs' onclick='detailIMEI(\"".$d['ID']."\")'>View</button>";
                 $data["imei"]        = $d['IMEI'];
                 // $data["description"] = $d['Title'];
                 $data["price"]       = $d['Price'];
@@ -199,9 +199,11 @@ class dashboard extends FSD_Controller
             $data["code"]       = $d['Code'];
             $data["email"]      = $d['Email'];
             $data["note"]       = $d['Notes'];
+			$data["price"]       = $d['Price'];
+            $data["comments"]    = $d['Comments'];
             $data["status"]     = $status;
             $data["created_at"] = $d['CreatedDateTime'];
-			$data["detail"]     =  "<button class='btn btn-secondary btn-xs' onclick='detailIMEI(\"".$d['ID']."\")'>View</button>";
+			$data["detail"]     = $d['Detail'];
 
             array_push($array_data, $data);
             $no++;
