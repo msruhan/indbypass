@@ -128,6 +128,10 @@
                                         <td id="statusModal"></td>
                                     </tr>
                                     <tr>
+                                        <th>REPLY</th>
+                                        <td id="commentsModal"></td>
+                                    </tr>
+                                    <tr>
                                         <th>CREATED AT</th>
                                         <td id="createdAtModal"></td>
                                     </tr>
@@ -219,6 +223,7 @@
                 $('#emailModal').text(row.data().email || 'N/A');
                 $('#priceModal').text(row.data().price || 'N/A');
                 $('#statusModal').html(formatBadge(row.data().status));
+                $('#commentsModal').text(row.data().comments || 'N/A');
                 $('#createdAtModal').text(row.data().created_at || 'N/A');
 
                 // Show the modal
