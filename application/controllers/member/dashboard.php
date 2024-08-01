@@ -110,7 +110,7 @@ class dashboard extends FSD_Controller
 
 
                 $data["action"]      = "<a href='#' onclick='detailIMEI(\"".$d['ID']."\")'><i class='fas fa-chevron-down'></i></a>";
-                $data["no"]          = $no;
+                $data["no"]          = $d['ID'];
                 $data["detail"]      =  "<button class='btn btn-info btn-xs' onclick='detailIMEI(\"".$d['ID']."\")'>View</button>";
                 $data["imei"]        = $d['IMEI'];
                 // $data["description"] = $d['Title'];
@@ -118,9 +118,9 @@ class dashboard extends FSD_Controller
                 $data["service"]     = $d['Title'];
                 $data["note"]    	 = $d['Note'];
                 $data["comments"]    = $d['Comments'];
+                $data["code"] 	 	 = $d['Code'];
                 $data["status"]      = $status;
                 $data["created_at"]  = $d['CreatedDateTime'];
-
                 array_push($array_data, $data);
                 $no++;
             }
@@ -194,11 +194,12 @@ class dashboard extends FSD_Controller
                     break;
             }
 
-            $data["no"]         = $no;
+			$data["no"]          = $d['ID'];
             $data["service"]    = $d['Title'];
-            $data["code"]       = $d['Code'];
+            $data["notes"]       = $d['Notes'];
             $data["email"]      = $d['Email'];
-            $data["note"]       = $d['Notes'];
+            $data["notes"]       = $d['Notes'];
+            $data["code"]       = $d['Code'];
 			$data["price"]       = $d['Price'];
             $data["comments"]    = $d['Comments'];
             $data["status"]     = $status;

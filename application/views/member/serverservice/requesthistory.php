@@ -129,7 +129,11 @@
                                     </tr>
                                     <tr>
                                         <th>REPLY</th>
-                                        <td id="commentsModal"></td>
+                                        <td id="codeModal"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>NOTES</th>
+                                        <td id="notesModal"></td>
                                     </tr>
                                     <tr>
                                         <th>CREATED AT</th>
@@ -180,7 +184,7 @@
                     className: 'column-details',
                     defaultContent: '<button class="btn btn-info btn-xs view-detail">View</button>',
                     orderable: false
-                }
+                },
             ],
             pagingType: "input",
             "processing": true,
@@ -223,8 +227,9 @@
                 $('#emailModal').text(row.data().email || 'N/A');
                 $('#priceModal').text(row.data().price || 'N/A');
                 $('#statusModal').html(formatBadge(row.data().status));
-                $('#commentsModal').text(row.data().comments || 'N/A');
                 $('#createdAtModal').text(row.data().created_at || 'N/A');
+                $('#codeModal').html(row.data().code || 'N/A');
+                $('#notesModal').text(row.data().notes || 'N/A');
 
                 // Show the modal
                 $('#detailServerOrderModal').modal('show');
@@ -264,6 +269,8 @@
                 $('#priceModal').text(row.data().price || 'N/A');
                 $('#statusModal').html(formatBadge(row.data().status));
                 $('#createdAtModal').text(row.data().created_at || 'N/A');
+                $('#codeModal').html(row.data().code || 'N/A');
+                $('#notesModal').text(row.data().notes || 'N/A');
 
                 // Show the modal
                 $('#detailServerOrderModal').modal('show');
