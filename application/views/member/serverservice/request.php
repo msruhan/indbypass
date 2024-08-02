@@ -14,7 +14,7 @@
         <h3 class="fw-bold">Place Order</h3>
         <ul class="breadcrumbs">
             <li class="nav-home">
-                <a href="#">
+                <a href="<?= site_url() ?>member/dashboard">
                     <i class="icon-home"></i>
                 </a>
             </li>
@@ -26,6 +26,27 @@
             </li>
         </ul>
     </div>
+</div>
+<div class="row">
+			<div class="col-sm-5 col-md-2">
+				<div class="card card-stats card-primary card-round">
+				<div class="card-body">
+					<div class="row">
+					<div class="col-4">
+						<div class="icon-big text-center">
+						<i class="fas fa-wallet"></i>
+						</div>
+					</div>
+					<div class="col-6 col-stats">
+						<div class="numbers">
+						<p class="card-category">Balance</p>
+						<h4 class="card-title"><?= number_format($credit, 2) ?></h4>
+						</div>
+					</div>
+					</div>
+				</div>
+				</div>
+			</div>
 </div>
 <div class="row">
     <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12">
