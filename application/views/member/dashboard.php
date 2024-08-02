@@ -12,6 +12,7 @@
 		</div>
 	</head>
 	<body>
+		<!-- Card Chart -->
 		<div class="row">
 			<div class="col-sm-6 col-md-3">
 				<div class="card card-stats card-primary card-round">
@@ -90,7 +91,7 @@
 				</div>
 			</div>
 		</div>
-
+		<!-- Pie Chart -->
 		<div class="row">
 			<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
 				<div class="card">
@@ -166,7 +167,7 @@
 				</div>
 			</div>
 		</div>
-
+		<!-- Total Order Statistics -->
 		<div class="row">
 			<div class="col-md-12">
 				<div class="card">
@@ -198,7 +199,7 @@
 				</div>
 			</div>				
 		</div>
-		
+		<!-- Customized Card -->
 		<div class="row">
 			<div class="col-md-7">
 				<div class="card">
@@ -245,52 +246,84 @@
 								<time class="date" datetime="9-17">Sep 17</time>
 								<span class="text">Attending the event <a href="single-event.php">"Some New Event"</a></span>
 							</li>
-							<li class="feed-item feed-item-secondary">
-								<time class="date" datetime="9-17">Sep 17</time>
-								<span class="text">Attending the event <a href="single-event.php">"Some New Event"</a></span>
-							</li>
-							<li class="feed-item feed-item-success">
-								<time class="date" datetime="9-17">Sep 17</time>
-								<span class="text">Attending the event <a href="single-event.php">"Some New Event"</a></span>
-							</li>
-							<li class="feed-item feed-item-info">
-								<time class="date" datetime="9-17">Sep 17</time>
-								<span class="text">Attending the event <a href="single-event.php">"Some New Event"</a></span>
-							</li>
 						</ol>
 					</div>
 				</div>
-			</div>
-								
-								<div class="col-md-5">
-									<div class="card card-post card-round">
-									<img class="card-img-top" src="<?= base_url() ?>assets/img/opensubmit.png"  alt="Card image cap" />
-									<div class="card-body">
-										<div class="d-flex">
-										<div class="avatar">
-											<img
-											src="<?= base_url() ?>assets/img/profile/FOUNDER.png" 
-											alt="..."
-											class="avatar-img rounded-circle"
-											/>
-										</div>
-										<div class="info-post ms-2">
-											<p class="username">Founder INDOBYPASS</p>
-											<p class="date text-muted">20 Jul 24</p>
-										</div>
-										</div>
-										<div class="separator-solid"></div>
-										<p class="card-category text-info mb-1"><a href="#">BYPASS XR-15 PM</a></p>
-										<h3 class="card-title">
-										<a href="#"> Launching New Tools!</a>
-										</h3>
-										<p class="card-text">
-										We are launching new tools to help you to unlock your device. Stay tuned! 
-										</p>
-										<!-- <a href="#" class="btn btn-primary btn-rounded btn-sm">Read More</a> -->
-									</div>
-									</div>
+				<div class="card card-round">
+					<div class="card-body">
+						<div class="card-title fw-mediumbold">INDOBYPASS TEAM</div>
+						<div class="card-list">
+							<div class="item-list">
+								<div class="avatar">
+									<img
+									src="<?= base_url() ?>assets/img/profile/FOUNDER.png" 
+									alt="..."
+									class="avatar-img rounded-circle"
+									/>
 								</div>
+								<div class="info-user ms-3">
+									<div class="username">Masruhan</div>
+									<div class="status">Founder</div>
+								</div>
+								<a href="https://wa.me/6285158856462?text=Halo%20Founder%20INDOBYPASS%20" target="_blank" class="btn btn-icon btn-sm">
+									<i class="fab fa-whatsapp"></i>
+								</a>
+								<a href="https://t.me/indobypassfounder" target="_blank" class="btn btn-icon btn-sm">
+									<i class="fab fa-telegram"></i>
+								</a>
+							</div>
+							<div class="item-list">
+								<div class="avatar">
+									<img
+									src="<?= base_url() ?>assets/img/profile/COFOUNDER.png" 
+									alt="..."
+									class="avatar-img rounded-circle"
+									/> 
+								</div>
+								<div class="info-user ms-3">
+									<div class="username">AL Fajri</div>
+									<div class="status">CO-Founder</div>
+								</div>
+								<a href="https://wa.me/6289612322511?text=Halo%20CO-Founder%20INDOBYPASS%20" target="_blank" class="btn btn-icon btn-sm">
+									<i class="fab fa-whatsapp"></i>
+								</a>
+								<a href="https://t.me/al1010" target="_blank" class="btn btn-icon btn-sm">
+									<i class="fab fa-telegram"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-5">
+				<div class="card card-post card-round">
+				<img class="card-img-top" src="<?= base_url() ?>assets/img/opensubmit.png"  alt="Card image cap" />
+				<div class="card-body">
+					<div class="d-flex">
+					<div class="avatar">
+						<img
+						src="<?= base_url() ?>assets/img/profile/FOUNDER.png" 
+						alt="..."
+						class="avatar-img rounded-circle"
+						/>
+					</div>
+					<div class="info-post ms-2">
+						<p class="username">Founder INDOBYPASS</p>
+						<p class="date text-muted">20 Jul 24</p>
+					</div>
+					</div>
+					<div class="separator-solid"></div>
+					<p class="card-category text-info mb-1"><a href="#">BYPASS XR-15 PM</a></p>
+					<h3 class="card-title">
+					<a href="#"> Launching New Tools!</a>
+					</h3>
+					<p class="card-text">
+					We are launching new tools to help you to unlock your device. Stay tuned! 
+					</p>
+					<!-- <a href="#" class="btn btn-primary btn-rounded btn-sm">Read More</a> -->
+				</div>
+				</div>
+			</div>
 		</div>
 		
 		<script src="/indbypass/assets/assets_members/js/plugin/chart.js/chart.min.js"></script>
