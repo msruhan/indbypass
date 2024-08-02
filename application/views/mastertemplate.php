@@ -1,3 +1,20 @@
+<style>
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1em; /* Optional: Adjust the padding as needed */
+}
+
+.center-content .text-section {
+    margin: 0;
+    padding: 0.5em 0;
+}
+
+
+</style>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -139,12 +156,13 @@
                         </ul>
                     </div>
                 </li>
-                <!-- <li <?= $this->uri->uri_string(2) == 'member/dashboard/credits' ? 'class="nav-item active"' : 'class="nav-item"'; ?>>
-                    <a href="<?= site_url() ?>member/dashboard/credits">
-                        <i class="fas fa-credit-card"></i>
-                        <p>Credits</p>
-                    </a>
-                </li> -->
+                <li class="nav-section center-content">
+                    <span class="sidebar-mini-icon">
+                    <span class="badge bg-warning">Versi v1.0</span>
+
+                    </span>
+                    <h4 class="text-section">Hak Cipta @2024 INDOBYPASS Team</h4>
+                </li>
             </ul>
         </div>
     </div>
@@ -296,21 +314,9 @@
 
             <footer class="footer">
                 <div class="container-fluid d-flex justify-content-between align-items-center">
-                    <nav class="pull-left">
-                        <ul class="nav">
-                            <li class="nav-item">
-                                <div class="nav-link">
-                                    <i class="fab fa-whatsapp"></i> +6285158856462
-                                </div>
-                            </li>
-                        </ul>
-                    </nav>
                     <div class="copyright text-center font-weight-bold mx-auto">
                         Copyrights © 2024 All Rights Reserved by INDOBYPASS Team
                     </div>
-                    <!-- <div>
-                        <i class="fab fa-telegram-plane"></i> <a href="https://t.me/joinchat/TXMvEoIyndr9lB-T">https://t.me/joinchat/TXMvEoIyndr9lB-T</a>
-                    </div> -->
                 </div>
             </footer>
         </div>

@@ -137,6 +137,43 @@
             </div>
         </div>
     </div>
+    <div class="col-xl-3 col-lg-3 col-md-8 col-sm-12">
+				<div class="card card-profile">
+					<div class="card-header" style="height: 83px">
+						<div class="profile-picture">
+							<div class="avatar avatar-xl">
+								<img src="<?= base_url() ?>assets/assets_members/img/profile.jpg" alt="..." class="avatar-img rounded-circle" />
+							</div>
+						</div>
+					</div>
+					<div class="card-body">
+						<div class="user-profile text-center">
+							<div class="name">
+								<?= $this->session->userdata('MemberFirstName') . " " . $this->session->userdata("MemberLastName"); ?>
+							</div>
+							<div class="job"><?php echo $this->session->userdata("MemberEmail"); ?></div>
+							<div class="desc">I knew that you would do this!</div>
+							<div class="social-media">
+								<a class="btn btn-info btn-twitter btn-sm btn-link" href="#">
+									<span class="btn-label just-icon"><i class="icon-social-twitter"></i>
+									</span>
+								</a>
+								<a class="btn btn-primary btn-sm btn-link" rel="publisher" href="#">
+									<span class="btn-label just-icon"><i class="icon-social-facebook"></i>
+									</span>
+								</a>
+								<a class="btn btn-danger btn-sm btn-link" rel="publisher" href="#">
+									<span class="btn-label just-icon"><i class="icon-social-instagram"></i>
+									</span>
+								</a>
+							</div>
+							<div class="view-profile">
+								<a href="<?= site_url('member/dashboard/profile') ?>" class="btn btn-secondary w-100">View Full Profile</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 </div>
 
 <!-- Select2 -->
