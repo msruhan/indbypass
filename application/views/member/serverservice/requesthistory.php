@@ -26,10 +26,10 @@
 
     /* Styling Modal */
     .modal-content {
-        padding: 0.5rem;
+        padding: 0.1rem;
     }
     .modal-header {
-        background-color: #7757f7
+        background-color: #080017;
         color: white;
     }
     .details-container {
@@ -50,7 +50,7 @@
         <h3 class="fw-bold">Server Orders</h3>
         <ul class="breadcrumbs">
             <li class="nav-home">
-                <a href="#">
+                <a href="<?= site_url() ?>member/dashboard">
                     <i class="icon-home"></i>
                 </a>
             </li>
@@ -78,12 +78,12 @@
                             <thead>
                                 <tr>
                                     <th class="column-actions" style="width: 1%;"></th>
-                                    <th style="width: 1%;">No</th>
+                                    <th style="width: 1%;">ID</th>
                                     <th style="width: 10%;">Date</th>
-                                    <th style="width: 10%;">Email</th>
+                                    <th style="width: 10%;">Account</th>
                                     <th class="column-service" style="width: 40%;">Service</th>
                                     <th class="column-status" style="width: 5%;">Status</th>
-                                    <th class="column-details" style="width: 5%;">Details</th>
+                                    <th class="column-details" style="width: 5%;">Detail</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -97,13 +97,12 @@
     </div>
 </div>
 
-<!-- Modal -->
 <div class="modal fade" id="detailServerOrderModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Detail Server Order</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="card card-action mb-4">
@@ -128,16 +127,20 @@
                                         <td id="statusModal"></td>
                                     </tr>
                                     <tr>
-                                        <th>REPLY</th>
-                                        <td id="codeModal"></td>
-                                    </tr>
-                                    <tr>
                                         <th>NOTES</th>
                                         <td id="notesModal"></td>
                                     </tr>
                                     <tr>
-                                        <th>CREATED AT</th>
+                                        <th>ORDER TIME</th>
                                         <td id="createdAtModal"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>REPLY TIME</th>
+                                        <td id="createdAtModal"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>REPLY</th>
+                                        <td id="codeModal"></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -148,14 +151,6 @@
         </div>
     </div>
 </div>
-
-<!-- HTML and CSS remains unchanged -->
-
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script type="text/javascript">
     var base_url = "<?= base_url() ?>";
