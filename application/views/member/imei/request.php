@@ -14,7 +14,7 @@
         <h3 class="fw-bold">Place Order</h3>
         <ul class="breadcrumbs">
             <li class="nav-home">
-                <a href="#">
+                <a href="<?= site_url() ?>member/dashboard">
                     <i class="icon-home"></i>
                 </a>
             </li>
@@ -27,6 +27,28 @@
         </ul>
     </div>
 </div>
+<div class="row">
+			<div class="col-sm-5 col-md-2">
+				<div class="card card-stats card-primary card-round">
+				<div class="card-body">
+					<div class="row">
+					<div class="col-4">
+						<div class="icon-big text-center">
+						<i class="fas fa-wallet"></i>
+						</div>
+					</div>
+					<div class="col-6 col-stats">
+						<div class="numbers">
+						<p class="card-category">Balance</p>
+						<h4 class="card-title"><?= number_format($credit, 2) ?></h4>
+						</div>
+					</div>
+					</div>
+				</div>
+				</div>
+			</div>
+</div>
+
 <div class="row">
     <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12">
         <?= $this->session->flashdata('message') ?>
@@ -97,9 +119,12 @@
                 <div class="card-title">Description</div>
             </div>
             <div class="card-body pb-0">
-                <div id="load-field-text"><i class="text-muted" id="desc_service">Description for service selected!</i>
-                </div>
+                <div id="load-field-text"><i class="text-muted" id="desc_service">Description for service selected!</i></div>
                 <div class="separator-dashed"></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body pb-0">
                 <div class="mb-5">
                     <p class="card-title mb-2">IMEI History</p>
                     <div class="d-flex">
@@ -226,7 +251,7 @@ $(document).ready(function() {
                             ' <?php echo $this->lang->line('header_credits') ?></div>' +
                             '</div>'
                     }
-
+                    
                     if (data.delivery_time) {
                         // set html if data exist
                         html +=
@@ -258,4 +283,5 @@ $(document).ready(function() {
     $('#MethodID').select2();
 
 });
+
 </script>
