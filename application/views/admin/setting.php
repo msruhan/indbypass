@@ -18,6 +18,12 @@
                 <li>
                     <a href="#tab_4" data-toggle="tab">Notification</a>
                 </li>
+                <li>
+                    <a href="#tab_5" data-toggle="tab">Headlines</a>
+                </li>
+                <li>
+                    <a href="#tab_6" data-toggle="tab">Currencies</a>
+                </li>
             </ul>
             <div class="tab-content">
                 <div class="tab-pane active" id="tab_0">
@@ -224,6 +230,68 @@
                                     <div class="row">
                                         <div class="col-md-offset-3 col-md-9">
                                             <button type="submit" class="btn btn-info">Submit</button>
+                                            <button type="button" class="btn btn-default">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php echo form_close(); ?>  
+                            <!-- END FORM-->
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="tab_5">
+                    <div class="portlet">
+                        <div class="portlet-title">
+                            <div class="caption">
+                                <i class="fa fa-reorder"></i>Headlines
+                            </div>
+                        </div>
+                        <div class="portlet-body form">
+                            <!-- BEGIN FORM-->
+                            <?php echo form_open("admin/setting/update", array('class' => "form-horizontal")); ?>
+                                <div class="form-body">
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">Text</label>
+                                        <div class="col-md-4">
+                                            <textarea class="form-control" rows="5" cols="10" name="push_headline"><?php echo set_value('push_headline', $data['push_headline']) ?></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-actions">
+                                    <div class="row">
+                                        <div class="col-md-offset-3 col-md-9">
+                                            <button type="submit" class="btn btn-info">Submit</button>
+                                            <button type="button" class="btn btn-default">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php echo form_close(); ?>  
+                            <!-- END FORM-->
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="tab_6">
+                    <div class="portlet">
+                        <div class="portlet-title">
+                            <div class="caption">
+                                <i class="fa fa-reorder"></i>Currencies
+                            </div>
+                        </div>
+                        <div class="portlet-body form">
+                            <!-- BEGIN FORM-->
+                            <?php echo form_open("admin/setting/update", array('class' => "form-horizontal")); ?>
+                                <div class="form-body">
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">Rate USD to Rupiah  :</label>
+                                        <div class="col-md-4">
+                                            <textarea class="form-control" rows="5" cols="10" name="push_headline"><?php echo set_value('push_headline', $data['push_headline']) ?></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-actions">
+                                    <div class="row">
+                                        <div class="col-md-offset-3 col-md-9">
+                                            <button type="submit" class="btn btn-info">Update</button>
                                             <button type="button" class="btn btn-default">Cancel</button>
                                         </div>
                                     </div>
