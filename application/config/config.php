@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']						= 	'https://localhost/indbypass/';
+$config['base_url']						= 	'https://new.indobypass.com';
 $config['assets_url']					= 	$config['base_url'].'assets/';
 $config['page_url']						= 	$config['base_url'].'uploads/cms/pages/';
 $config['page_thumb_url']				= 	$config['base_url'].'uploads/cms/pages/thumbs/';
